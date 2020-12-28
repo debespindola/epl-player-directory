@@ -44,47 +44,9 @@ export const ALL_PLAYERS_QUERY = gql`
   }
 `;
 
-export const ALL_COUNTRIES_QUERY = gql`
-  query allCountries {
-    queryCountry {
-      id
-      name
-    }
-  }
-`;
-
-export const ALL_CLUBS_QUERY = gql`
-  query allClubs {
-    queryClub {
-      id
-      name
-    }
-  }
-`;
-
-const FILTER_PLAYERS_QUERY = gql`
-  query filterPlayers(
-    $filter: PlayerFilter
-    $countryID: [ID!]
-    $clubID: [ID!]
-  ) {
-    queryPlayer(filter: $filter) @cascade {
-      name
-      position
-      country(filter: { id: $countryID }) {
-        id
-        name
-      }
-      club(filter: { id: $clubID }) {
-        id
-        name
-      }
-      id
-    }
-  }
-`;
 
 export default function PlayersList() {
+  const classes = useStyles();
 
   const { loading, error, data } = useQuery(ALL_PLAYERS_QUERY);
 
