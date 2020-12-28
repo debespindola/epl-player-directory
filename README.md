@@ -33,8 +33,9 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+---
 
-useful links:
+## useful links:
 https://slash.dgraph.io/_/schema
 https://www.graphqlbin.com/v2/new
 https://www.apollographql.com/blog/building-a-next-js-app-with-apollo-client-slash-graphql/
